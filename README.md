@@ -43,7 +43,7 @@ Grover's algorithm is a quantum search algorithm that provides an efficient way 
 * Print the probabilities of each basis state after running the algorithm.
 
 # Example Usage
-```
+```python
 import numpy as np
 
 def hadamard_gate():
@@ -101,6 +101,7 @@ probabilities = np.abs(result)**2
 for i in range(len(probabilities)):
     print(f"State |{i:0{n}b}>: Probability = {probabilities[i][0]:.4f}")
 ```
+
 # Requirements
 
 * Python 3.x 
@@ -115,17 +116,17 @@ for i in range(len(probabilities)):
 # Installation
 
 * Clone the repository
-```
+```python
 git clone https://github.com/dgonzalezt2/Grover-s-algorithm.git
 ```
 
 * Navigate to the project directory
-```
+```python
 cd Grovers_algorithm.py
 ```
 
 * Install the dependencies
-```
+```python
 pip install numpy
 ```
 
