@@ -115,7 +115,7 @@ git clone https://github.com/dgonzalezt2/Grover-s-algorithm.git
 
 # Navigate to the project directory
 ```
-cd Grover-s-algorithm
+cd Grovers_algorithm.py
 ```
 
 # Install the dependencies
