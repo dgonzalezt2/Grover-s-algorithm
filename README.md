@@ -108,17 +108,17 @@ for i in range(len(probabilities)):
 
 # Installation
 
-# Clone the repository
+* Clone the repository
 ```
 git clone https://github.com/dgonzalezt2/Grover-s-algorithm.git
 ```
 
-# Navigate to the project directory
+* Navigate to the project directory
 ```
 cd Grovers_algorithm.py
 ```
 
-# Install the dependencies
+* Install the dependencies
 ```
 pip install numpy
 ```
