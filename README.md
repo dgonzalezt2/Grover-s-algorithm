@@ -103,8 +103,15 @@ for i in range(len(probabilities)):
 ```
 # Requirements
 
-* Python 3.x
+* Python 3.x 
 * NumPy
+
+<a href="https://www.python.org" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/e67133bc60d96561bc247dfbc3eece0a897285c8/icons/Python-Dark.svg" alt="python" width="40" height="40"/>
+</a>
+
+<a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/e67133bc60d96561bc247dfbc3eece0a897285c8/icons/VSCode-Dark.svg" alt="visual" width="40" height="40"/> 
+</a>
 
 # Installation
 
