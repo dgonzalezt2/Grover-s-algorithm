@@ -3,7 +3,7 @@
 This repository contains an implementation of Grover's algorithm in Python using basic matrix operations. No libraries or function packages that implement quantum operations are used. The program receives the problem size (number of qubits) and the oracle function as parameters and generates the circuit that implements Grover's algorithm for that oracle function.
 
 * By [David Gonzalez Tamayo](https://github.com/dgonzalezt2)
-
+ 
 # Description
 
 Grover's algorithm is a quantum search algorithm that provides an efficient way to find a marked element in an unordered list of 2ⁿ elements. The implementation here is done using basic matrix operations to simulate the behavior of quantum circuits.
