@@ -1,49 +1,19 @@
 import numpy as np
 
 def hadamard_gate():
-    """
-    Crea la matriz de la puerta de Hadamard.
 
-    Returns:
-        numpy.ndarray: Matriz de la puerta de Hadamard.
-    """
     return np.array([[1, 1], [1, -1]]) / np.sqrt(2)
 
 def tensor_product(A, B):
-    """
-    Calcula el producto tensorial (producto de Kronecker) de dos matrices.
 
-    Args:
-        A (numpy.ndarray): Primera matriz.
-        B (numpy.ndarray): Segunda matriz.
-
-    Returns:
-        numpy.ndarray: Producto tensorial de A y B.
-    """
     return np.kron(A, B)
 
 def identity(n):
-    """
-    Crea una matriz identidad de tamaño n x n.
 
-    Args:
-        n (int): Dimensión de la matriz identidad.
-
-    Returns:
-        numpy.ndarray: Matriz identidad de tamaño n x n.
-    """
     return np.eye(n)
 
 def diffusion_operator(n):
-    """
-    Crea el operador de difusión para el algoritmo de Grover.
 
-    Args:
-        n (int): Número de qubits.
-
-    Returns:
-        numpy.ndarray: Operador de difusión de tamaño (2^n) x (2^n).
-    """
     # Crear el operador de proyección |\psi><\psi|
     psi = np.ones((2**n, 2**n)) / (2**n)
     
@@ -51,16 +21,7 @@ def diffusion_operator(n):
     return 2 * psi - identity(2**n)
 
 def create_oracle(n, marked_state):
-    """
-    Crea un oráculo para el algoritmo de Grover que marca un estado específico.
 
-    Args:
-        n (int): Número de qubits.
-        marked_state (str): Estado marcado en representación binaria.
-
-    Returns:
-        numpy.ndarray: Oráculo de tamaño (2^n) x (2^n) que marca el estado especificado.
-    """
     # Inicializar el oráculo como la matriz identidad
     oracle = identity(2**n)
     
@@ -73,16 +34,7 @@ def create_oracle(n, marked_state):
     return oracle
 
 def grover_algorithm(n, oracle):
-    """
-    Implementa el algoritmo de Grover para la búsqueda de un estado marcado.
 
-    Args:
-        n (int): Número de qubits.
-        oracle (numpy.ndarray): Oráculo que marca el estado objetivo.
-
-    Returns:
-        numpy.ndarray: Estado final después de aplicar el algoritmo de Grover.
-    """
     # Estado inicial |0>^n
     initial_state = np.zeros((2**n, 1))
     initial_state[0] = 1
