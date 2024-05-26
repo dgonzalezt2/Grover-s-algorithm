@@ -14,21 +14,21 @@ def identity(n):
 
 def diffusion_operator(n):
 
-    # Crear el operador de proyección |\psi><\psi|
+    # Crea la proyección |\psi><\psi|
     psi = np.ones((2**n, 2**n)) / (2**n)
     
-    # Construir el operador de difusión 2|\psi><\psi| - I
+    # Construye la difusión 2|\psi><\psi| - I
     return 2 * psi - identity(2**n)
 
 def create_oracle(n, marked_state):
 
-    # Inicializar el oráculo como la matriz identidad
+    # Inicia el oraculo en la matriz identidad
     oracle = identity(2**n)
     
-    # Convertir el estado marcado a un índice
+    # Convirte el indice marcado
     index = int(marked_state, 2)
     
-    # Invertir la amplitud del estado marcado
+    # Invierta la amplitud
     oracle[index, index] = -1
     
     return oracle
@@ -39,7 +39,7 @@ def grover_algorithm(n, oracle):
     initial_state = np.zeros((2**n, 1))
     initial_state[0] = 1
     
-    # Aplicar Hadamard a cada qubit para crear superposición
+    # Aplica Hadamard a cada qubit para crear la superposición
     H = hadamard_gate()
     Hn = H
     for _ in range(n-1):
@@ -52,15 +52,15 @@ def grover_algorithm(n, oracle):
     
     # Iteraciones de Grover
     for _ in range(iterations):
-        # Aplicar el oráculo
+        # Aplica el oráculo
         state = np.dot(oracle, state)
-        # Aplicar el operador de difusión
+        # Aplica el operador de difusión
         D = diffusion_operator(n)
         state = np.dot(D, state)
     
     return state
 
-# Tamaño del problema (número de qubits)
+# Tamaño del problema (# de qubits)
 n = 5
 
 # Estado marcado (cambiar esto para marcar un estado diferente)
